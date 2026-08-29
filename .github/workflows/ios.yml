@@ -18,10 +18,9 @@ jobs:
         with:
           xcode-version: latest
 
-      - name: Build for iOS Device (Archive structure)
+      - name: Build for iOS Device
         run: |
-          swift package resolve
-          xcodebuild -skipPackagePluginValidation -scheme LobikoApp -destination "generic/platform=iOS" -configuration Release archive -archivePath $PWD/build/LobikoApp.xcarchive
+          xcodebuild -skipPackagePluginValidation -project LobikoApp.xcodeproj -scheme LobikoApp -destination "generic/platform=iOS" -configuration Release archive -archivePath $PWD/build/LobikoApp.xcarchive
 
       - name: Upload iOS Archive Artifact
         uses: actions/upload-artifact@v4
