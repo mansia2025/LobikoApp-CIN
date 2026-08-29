@@ -21,10 +21,10 @@ jobs:
       - name: Build for iOS Device
         run: |
           swift package resolve
-          xcodebuild -skipPackagePluginValidation -scheme LobikoApp -destination "generic/platform=iOS" -configuration Release -derivedDataPath $PWD/DerivedData build
+          xcodebuild -skipPackagePluginValidation -scheme LobikoApp -destination "generic/platform=iOS" -configuration Release SYMROOT=$PWD/build build
 
       - name: Upload App Binary
         uses: actions/upload-artifact@v4
         with:
           name: LobikoApp-Binary
-          path: DerivedData/Build/Products/Release-iphoneos/LobikoApp.app
+          path: build/Release-iphoneos/LobikoApp.app
