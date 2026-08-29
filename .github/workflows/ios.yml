@@ -18,13 +18,13 @@ jobs:
         with:
           xcode-version: latest
 
-      - name: Build for iOS Device (Archive structure)
+      - name: Build for iOS Device
         run: |
           swift package resolve
-          xcodebuild -skipPackagePluginValidation -scheme LobikoApp -destination "generic/platform=iOS" -configuration Release archive -archivePath $PWD/build/LobikoApp.xcarchive
+          xcodebuild -skipPackagePluginValidation -scheme LobikoApp -destination "generic/platform=iOS" -configuration Release -derivedDataPath $PWD/DerivedData build
 
-      - name: Upload iOS Archive Artifact
+      - name: Upload App Binary
         uses: actions/upload-artifact@v4
         with:
-          name: LobikoApp-Archive
-          path: build/LobikoApp.xcarchive
+          name: LobikoApp-Binary
+          path: DerivedData/Build/Products/Release-iphoneos/LobikoApp.app
