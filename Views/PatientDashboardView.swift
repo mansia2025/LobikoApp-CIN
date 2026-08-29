@@ -12,7 +12,7 @@ struct PatientDashboardView: View {
                         
                         // Bouton Pharmacies
                         Button(action: {
-                            openMapSearch(query: "pharmacie")
+                            openMapSearch(query: "pharmacies de garde Kinshasa")
                         }) {
                             HStack {
                                 Image(systemName: "cross.case.fill")
@@ -26,7 +26,7 @@ struct PatientDashboardView: View {
                         
                         // Bouton Hôpitaux
                         Button(action: {
-                            openMapSearch(query: "hôpital")
+                            openMapSearch(query: "hôpitaux Kinshasa")
                         }) {
                             HStack {
                                 Image(systemName: "cross.fill")
@@ -40,7 +40,7 @@ struct PatientDashboardView: View {
                         
                         // Bouton Dispensaires
                         Button(action: {
-                            openMapSearch(query: "dispensaire")
+                            openMapSearch(query: "dispensaires Kinshasa")
                         }) {
                             HStack {
                                 Image(systemName: "heart.text.square.fill")
@@ -71,8 +71,7 @@ struct PatientDashboardView: View {
                     Section(header: Text("Mon Compte")) {
                         Text("Rôle : \(appState.currentRole?.rawValue ?? "")")
                         Button("Se déconnecter") {
-                            appState.isAuthenticated = false
-                            appState.currentRole = nil
+                            appState.signOut()
                         }
                         .foregroundColor(.red)
                     }
@@ -88,7 +87,7 @@ struct PatientDashboardView: View {
     // Fonction universelle pour lancer l'application de cartographie avec filtre
     func openMapSearch(query: String) {
         let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        if let url = URL(string: "http://maps.google.com/maps?q=\(encodedQuery)") {
+        if let url = URL(string: "https://maps.google.com/maps?q=\(encodedQuery)") {
             UIApplication.shared.open(url)
         }
     }

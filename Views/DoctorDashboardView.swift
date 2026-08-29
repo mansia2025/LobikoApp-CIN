@@ -2,6 +2,7 @@ import SwiftUI
 
 struct DoctorDashboardView: View {
     @EnvironmentObject var appState: AppState
+    @State private var prescriptionCreated = false
 
     var body: some View {
         NavigationView {
@@ -14,18 +15,21 @@ struct DoctorDashboardView: View {
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                         Button("Établir une e-ordonnance") {
-                            // Action pour prescrire
+                            prescriptionCreated = true
                         }
                         .padding(.top, 5)
                         .foregroundColor(.blue)
                     }
                     .padding(.vertical, 5)
+                    if prescriptionCreated {
+                        Label("E-ordonnance créée localement.", systemImage: "checkmark.circle.fill")
+                            .foregroundColor(.green)
+                    }
                 }
                 
                 Section {
                     Button("Se déconnecter") {
-                        appState.isAuthenticated = false
-                        appState.currentRole = nil
+                            appState.signOut()
                     }
                     .foregroundColor(.red)
                 }

@@ -4,6 +4,7 @@ struct OnboardingView: View {
     @EnvironmentObject var appState: AppState
     @State private var selectedRole: UserRole = .patient
     @State private var phoneNumber: String = ""
+    @State private var validationMessage: String?
     
     var body: some View {
         NavigationView {
@@ -35,9 +36,13 @@ struct OnboardingView: View {
                     
                     TextField("Ex: +243 812 345 678", text: $phoneNumber)
                         .keyboardType(.phonePad)
+                        .textContentType(.telephoneNumber)
                         .padding()
                         .background(Color(.systemGray6))
                         .cornerRadius(10)
+                    if let validationMessage {
+                        Text(validationMessage).font(.caption).foregroundColor(.red)
+                    }
                 }
                 .padding(.horizontal, 20)
                 
@@ -61,9 +66,12 @@ struct OnboardingView: View {
                 
                 // Bouton de validation pour entrer dans l'app
                 Button(action: {
-                    // Valide l'authentification et applique le rôle choisi
-                    appState.currentRole = selectedRole
-                    appState.isAuthenticated = true
+                    let number = phoneNumber.trimmingCharacters(in: .whitespacesAndNewlines)
+                    guard number.filter(\.isNumber).count >= 9 else {
+                        validationMessage = "Saisissez un numéro de téléphone valide."
+                        return
+                    }
+                    appState.signIn(role: selectedRole, phoneNumber: number)
                 }) {
                     Text("Commencer")
                         .font(.headline)

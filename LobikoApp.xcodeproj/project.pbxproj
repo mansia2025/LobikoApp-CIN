@@ -1,0 +1,73 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		100000000000000000000001 /* LobikoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000001 /* LobikoApp.swift */; };
+		100000000000000000000002 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000002 /* AppState.swift */; };
+		100000000000000000000003 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000003 /* LocationManager.swift */; };
+		100000000000000000000004 /* MedicalLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000004 /* MedicalLocation.swift */; };
+		100000000000000000000005 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000005 /* OnboardingView.swift */; };
+		100000000000000000000006 /* DoctorDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000006 /* DoctorDashboardView.swift */; };
+		100000000000000000000007 /* PharmacistDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000007 /* PharmacistDashboardView.swift */; };
+		100000000000000000000008 /* DeliveryDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000008 /* DeliveryDashboardView.swift */; };
+		100000000000000000000009 /* OderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000009 /* OderView.swift */; };
+		10000000000000000000000A /* PatientDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000A /* PatientDashboardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		200000000000000000000001 /* LobikoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobikoApp.swift; sourceTree = "<group>"; };
+		200000000000000000000002 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		200000000000000000000003 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		200000000000000000000004 /* MedicalLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalLocation.swift; sourceTree = "<group>"; };
+		200000000000000000000005 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/OnboardingView.swift; sourceTree = "<group>"; };
+		200000000000000000000006 /* DoctorDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/DoctorDashboardView.swift; sourceTree = "<group>"; };
+		200000000000000000000007 /* PharmacistDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/PharmacistDashboardView.swift; sourceTree = "<group>"; };
+		200000000000000000000008 /* DeliveryDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/DeliveryDashboardView.swift; sourceTree = "<group>"; };
+		200000000000000000000009 /* OderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/OderView.swift; sourceTree = "<group>"; };
+		20000000000000000000000A /* PatientDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/PatientDashboardView.swift; sourceTree = "<group>"; };
+		20000000000000000000000B /* LobikoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = LobikoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		300000000000000000000001 = {isa = PBXGroup; children = (200000000000000000000001, 200000000000000000000002, 200000000000000000000003, 200000000000000000000004, 200000000000000000000005, 200000000000000000000006, 200000000000000000000007, 200000000000000000000008, 200000000000000000000009, 20000000000000000000000A, 300000000000000000000002); sourceTree = "<group>"; };
+		300000000000000000000002 = {isa = PBXGroup; children = (20000000000000000000000B); name = Products; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		400000000000000000000001 = {isa = PBXNativeTarget; buildConfigurationList = 500000000000000000000002; buildPhases = (600000000000000000000001, 600000000000000000000002, 600000000000000000000003); buildRules = (); dependencies = (); name = LobikoApp; productName = LobikoApp; productReference = 20000000000000000000000B; productType = "com.apple.product-type.application"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		700000000000000000000001 = {isa = PBXProject; attributes = { LastUpgradeCheck = 1600; TargetAttributes = { 400000000000000000000001 = { CreatedOnToolsVersion = 16.0; }; }; }; buildConfigurationList = 500000000000000000000001; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base, fr); mainGroup = 300000000000000000000001; productRefGroup = 300000000000000000000002; projectDirPath = ""; projectRoot = ""; targets = (400000000000000000000001); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		600000000000000000000002 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		600000000000000000000001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (100000000000000000000001, 100000000000000000000002, 100000000000000000000003, 100000000000000000000004, 100000000000000000000005, 100000000000000000000006, 100000000000000000000007, 100000000000000000000008, 100000000000000000000009, 10000000000000000000000A); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		600000000000000000000003 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		800000000000000000000001 = {isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; }; name = Debug; };
+		800000000000000000000002 = {isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; }; name = Release; };
+		800000000000000000000003 = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = ""; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 16.0; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.lobiko.app; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
+		800000000000000000000004 = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = ""; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 16.0; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.lobiko.app; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		500000000000000000000001 = {isa = XCConfigurationList; buildConfigurations = (800000000000000000000001, 800000000000000000000002); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		500000000000000000000002 = {isa = XCConfigurationList; buildConfigurations = (800000000000000000000003, 800000000000000000000004); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = 700000000000000000000001;
+}

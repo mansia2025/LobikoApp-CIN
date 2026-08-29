@@ -8,7 +8,12 @@ workflows:
     scripts:
       - name: Build iOS App
         script: |
-          # Commande de compilation pour projet SwiftUI natif
-          echo "Préparation du build pour Lobiko App"
+          xcodebuild \
+            -project LobikoApp.xcodeproj \
+            -scheme LobikoApp \
+            -sdk iphoneos \
+            -configuration Release \
+            -archivePath "$CM_BUILD_DIR/build/LobikoApp.xcarchive" \
+            archive CODE_SIGNING_ALLOWED=NO
     artifacts:
-      - build/ios/ipa/*.ipa
+      - build/LobikoApp.xcarchive
