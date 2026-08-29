@@ -6,15 +6,19 @@ on:
 
 jobs:
   build:
-    name: Build iOS App
+    name: Build iOS App for Device
     runs-on: macos-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check project list
-        run: |
-          find . -name "*.xcodeproj" -o -name "*.xcworkspace"
-          xcodebuild -list
+      - name: Set up Swift / Xcode version
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest
 
+      - name: Build for iOS Device (Archive structure)
+        run: |
+          swift package resolve
+          xcodebuild -skipPackagePluginValidation -scheme LobikoApp -destination "generic/platform=iOS" -configuration Release archive -archivePath $PWD/build/LobikoApp.xcarchive
