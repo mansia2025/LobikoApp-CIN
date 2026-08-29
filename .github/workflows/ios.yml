@@ -13,13 +13,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Xcode
-        uses: maxim-lobanov/setup-xcode@v1
-        with:
-          xcode-version: latest
+      - name: List Xcode versions
+        run: ls -la /Applications/ | grep Xcode
 
-      - name: Build project
-        run: |
-          echo "Vérification du projet SwiftUI..."
-          xcodebuild -list
-
+      - name: Check project list
+        run: xcodebuild -list
