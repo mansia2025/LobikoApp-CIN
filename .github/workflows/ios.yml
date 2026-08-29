@@ -13,8 +13,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: List Xcode versions
-        run: ls -la /Applications/ | grep Xcode
-
       - name: Check project list
-        run: xcodebuild -list
+        run: |
+          find . -name "*.xcodeproj" -o -name "*.xcworkspace"
+          xcodebuild -list
+
