@@ -1,0 +1,14 @@
+workflows:
+  ios-native-workflow:
+    name: Lobiko iOS Native Workflow
+    max_build_duration: 60
+    instance_type: mac_mini_m1
+    environment:
+      xcode: latest
+    scripts:
+      - name: Build iOS App
+        script: |
+          # Commande de compilation pour projet SwiftUI natif
+          echo "Préparation du build pour Lobiko App"
+    artifacts:
+      - build/ios/ipa/*.ipa
