@@ -22,3 +22,9 @@ jobs:
         run: |
           swift package resolve
           xcodebuild -skipPackagePluginValidation -scheme LobikoApp -destination "generic/platform=iOS" -configuration Release archive -archivePath $PWD/build/LobikoApp.xcarchive
+
+      - name: Upload iOS Archive Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LobikoApp-Archive
+          path: build/LobikoApp.xcarchive
